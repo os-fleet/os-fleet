@@ -1,0 +1,56 @@
+---
+name: Feature Request
+description: Suggest an idea or an improvement.
+title: "feat: "
+labels: ["enhancement", "triage"]
+type: feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a feature!
+        Please check that a similar request does not already exist before submitting.
+  - type: dropdown
+    id: service
+    attributes:
+      label: Concerned service
+      description: Which part of os-fleet would this feature affect?
+      multiple: true
+      options:
+        - control-tower-api
+        - control-tower-console
+        - dispatch-service
+        - fleet-service
+        - geocoding-service
+        - notification-service
+        - parcel-service
+        - tracking-console
+        - tracking-service
+        - Other / I don't know
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What problem or need does this feature address?
+      placeholder: I'm always frustrated when...
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe what you would like to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other solutions or workarounds you have considered.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Mockups, examples, links or anything else that helps.
